@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Assessment</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet "href="styles.css"> 
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Fitness Assessment</h1>
+        <form action="result.html" method="GET">
+            <div class="form-group">
+                <label for="firstName">What is your first name?</label>
+                <input type="text" class="form-control" id="firstName" name="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">What is your last name?</label>
+                <input type="text" class="form-control" id="lastName" name="lastName">
+            </div>
+            <div class="form-group">
+                <label for="age">How old are you?</label>
+                <input type="number" class="form-control" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="weight">How much do you currently weigh? (in lbs)</label>
+                <input type="number" class="form-control" id="weight" name="weight">
+            </div>
+            <div class="form-group">
+                <label for="height">What is your height? (in ft)</label>
+                <input type="text" class="form-control" id="height" name="height">
+            </div>
+            <div class="form-group">
+                <label>What is your gender?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+                    <label class="form-check-label" for="genderMale">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+                    <label class="form-check-label" for="genderFemale">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>How many days a week do you engage in physical activity for at least 30 minutes ?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="day" id="day01" value="day">
+                    <label class="form-check-label" for="day01">0-1 Days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="day" id="day23" value="day">
+                    <label class="form-check-label" for="day23">2-3 Days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="day" id="day45" value="day">
+                    <label class="form-check-label" for="day45">3-4 Days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="day" id="day56" value="day">
+                    <label class="form-check-label" for="day56">5-6 Days</label>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label>How many calories on estimate you think you consume a day?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="calories" id="calories1" value="1000-1500 calories">
+                    <label class="form-check-label" for="calories1">1000-1500 calories</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="calories" id="calories2" value="1500-2000 calories">
+                    <label class="form-check-label" for="calories2">1500-2000 calories</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="calories" id="calories3" value="2000-3000 calories">
+                    <label class="form-check-label" for="calories3">2000-3000 calories</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="calories" id="calories4" value="3000 or more">
+                    <label class="form-check-label" for="calories4">3000 or more</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>How would you describe your current diet?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diet" id="dietPoor" value="Poor">
+                    <label class="form-check-label" for="dietPoor">Poor (fast food, processed food, high in sugar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diet" id="dietAverage" value="Average">
+                    <label class="form-check-label" for="dietAverage">Average (occasional fast food, some home-cooked meals)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diet" id="dietGood" value="Good">
+                    <label class="form-check-label" for="dietGood">Good (balanced diet, home-cooked meals, low in sugar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diet" id="dietExcellent" value="Excellent">
+                    <label class="form-check-label" for="dietExcellent">Excellent (predominantly whole foods, balanced nutrients)</label>
+                </div>
+            </div>
+                
+            
+            <div class="form-group">
+                <label>Do you smoke?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="smoke" id="smokeYes" value="Yes">
+                    <label class="form-check-label" for="smokeYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="smoke" id="smokeNo" value="No">
+                    <label class="form-check-label" for="smokeNo">No</label>
+                </div>
+            
+                
+            </div>
+            <div class="form-group">
+                <label>Do you drink alcohol?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="alcohol" id="alcoholYes1" value="Yes, more than 3 times a week">
+                    <label class="form-check-label" for="alcoholYes1">Yes, more than 3 times a week</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="alcohol" id="alcoholYes2" value="Yes, 1-2 times a week">
+                    <label class="form-check-label" for="alcoholYes2">Yes, 1-2 times a week</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="alcohol" id="alcoholRarely" value="Rarely">
+                    <label class="form-check-label" for="alcoholRarely">Rarely</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="alcohol" id="alcoholNo" value="No">
+                    <label class="form-check-label" for="alcoholNo">No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>How many hours of sleep do you get per night?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sleep" id="sleepLess5" value="Less than 5 hours">
+                    <label class="form-check-label" for="sleepLess5">Less than 5 hours</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sleep" id="sleep5-6" value="5-6 hours">
+                    <label class="form-check-label" for="sleep5-6">5-6 hours</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sleep" id="sleep7-8" value="7-8 hours">
+                    <label class="form-check-label" for="sleep7-8">7-8 hours</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sleep" id="sleepMore8" value="More than 8 hours">
+                    <label class="form-check-label" for="sleepMore8">More than 8 hours</label>
+                </div>
+            </div>
+                
+            
+            <div class="form-group">
+                <label>How would you rate your stress level on a scale from 1 to 5, with 5 being the most stressed?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="stress" id="stressLow" value="1-2">
+                    <label class="form-check-label" for="stressLow">1-2 (low stress)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="stress" id="stressMedium" value="3">
+                    <label class="form-check-label" for="stressMedium">3 (medium stress)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="stress" id="stressHigh" value="4-5">
+                    <label class="form-check-label" for="stressHigh">4-5 (high stress)</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Do you have a family history of heart disease, diabetes, or other chronic illnesses?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="familyHistory" id="familyHistoryYes" value="Yes">
+                    <label class="form-check-label" for="familyHistoryYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="familyHistory" id="familyHistoryNo" value="No">
+                    <label class="form-check-label" for="familyHistoryNo">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>How many glasses of water do you drink a day?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="water" id="waterLess4" value="Less than 4 glasses">
+                    <label class="form-check-label" for="waterLess4">Less than 4 glasses</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="water" id="water4-6" value="4-6 glasses">
+                    <label class="form-check-label" for="water4-6">4-6 glasses</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="water" id="water7-8" value="7-8 glasses">
+                    <label class="form-check-label" for="water7-8">7-8 glasses</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="water" id="waterMore8" value="More than 8 glasses">
+                    <label class="form-check-label" for="waterMore8">More than 8 glasses</label>
+                </div>
+            </div>
+          <button type="submit" class="btn btn-primary">Click me for your results</button>
+        </form>
+    </div>
+    
+    <script src="score.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

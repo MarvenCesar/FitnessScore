@@ -1,0 +1,33 @@
+
+.full-height {
+    height: 70vh;
+}
+.center-content {
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+.form-group
+{
+    padding: 15px
+}
+.btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.container{
+    padding: 20px;
+    padding-left: 200px;
+  
+}
+.bg{
+    background: url('index.jpg');
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+
+  
