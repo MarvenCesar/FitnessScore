@@ -125,7 +125,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
    let height = document.querySelector('input[name="height"]').value;
    let gender = document.querySelector('input[name="gender"]:checked').value;
 
-   let percentageScore = (score / totalPossibleScore) * 100;
+   let percentageScore = ((score / totalPossibleScore) * 100).toFixed(2);
   
 
    // Create a new URL
