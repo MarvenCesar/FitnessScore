@@ -1,10 +1,8 @@
-//score.js
-
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     let score = 0;
-    let totalPossibleScore = 9.8; 
+    let totalPossibleScore = 10; 
 
     // Check physical activity
     let physicalActivity = document.querySelector('input[name="day"]:checked').id;
@@ -117,12 +115,13 @@ document.querySelector("form").addEventListener("submit", function(event) {
         score += 0.2;
     }
 
+
    // Capture additional fields
    let firstName = document.querySelector('input[name="firstName"]').value;
    let lastName = document.querySelector('input[name="lastName"]').value;
    let age = document.querySelector('input[name="age"]').value;
-   let weight = document.querySelector('input[name="weight"]').value;
-   let height = document.querySelector('input[name="height"]').value;
+   let weight = parseFloat(document.querySelector('input[name="weight"]').value);
+   let height = parseFloat(document.querySelector('input[name="height"]').value);
    let gender = document.querySelector('input[name="gender"]:checked').value;
 
    let percentageScore = ((score / totalPossibleScore) * 100).toFixed(2);
