@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let firstName = params.get('firstName');
     let lastName = params.get('lastName');
     let age = params.get('age');
-    let weight = parseFloat(params.get('weight')) * 0.453592;
-    let height = parseFloat(params.get('height')) * 0.3048;
+    let weight = parseFloat(params.get('weight')) * 0.453592; //convert to KG
+    let height = parseFloat(params.get('height')) * 0.3048; // convert to meters
     let gender = params.get('gender');
     let score = params.get('score'); 
 
@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
       // Calculate new score based on BMI
       if (BMI < 18.5) {
-          score *= 0.9; // adjust score for underweight
+          score *= 0.8; // adjust score for underweight
       } else if (BMI >= 18.5 && BMI <= 24.9) {
           score *= 1.0; // keep score the same for healthy weight
       } else if (BMI >= 25 && BMI <= 29.9) {
-          score *= 0.8; // adjust score for overweight
+          score *= 0.9; // adjust score for overweight
       } else {
           score *= 0.7; // adjust score for obesity
       }
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('height').innerText = height.toFixed(2);
     document.getElementById('gender').innerText = gender;
     document.getElementById("BMI").innerText = BMI.toFixed(2);
-    document.getElementById("score").innerText = score; 
+    document.getElementById("score").innerText = score.toFixed(2); 
    
 });
 

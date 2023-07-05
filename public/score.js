@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     let score = 0;
-    let totalPossibleScore = 10; 
+    let totalPossibleScore = 9; 
 
     // Check physical activity
     let physicalActivity = document.querySelector('input[name="day"]:checked').id;
@@ -114,7 +114,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
     else if (water === 'waterLess4') {
         score += 0.2;
     }
-
 
    // Capture additional fields
    let firstName = document.querySelector('input[name="firstName"]').value;
