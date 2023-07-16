@@ -1,3 +1,4 @@
+<!-- Assessment.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet "href="styles.css"> 
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="config.js"></script>
 </head>
 <body>
     <div class="container mt-5">
@@ -36,6 +40,10 @@
             <div class="form-group">
                 <label for="height">What is your height? (Example: Use 5.9 and not 5'9)</label>
                 <input type="text" class="form-control" id="height" name="height">
+            </div>
+            <div class="form-group">
+                <label for="email">What is your email?</label>
+                <input type="text" class="form-control" id="email" name="email">
             </div>
             <div class="form-group">
                 <label>What is your gender?</label>
@@ -208,6 +216,7 @@
                     <label class="form-check-label" for="waterMore8">More than 8 glasses</label>
                 </div>
             </div>
+           
           <button type="submit" class="btn btn-primary">Click me for your results</button>
         </form>
     </div>

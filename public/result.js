@@ -1,8 +1,8 @@
 
-
+// result.js
 document.addEventListener("DOMContentLoaded", function() {
     let params = new URLSearchParams(window.location.search);
-
+//
     let firstName = params.get('firstName');
     let lastName = params.get('lastName');
     let age = params.get('age');
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let height = parseFloat(params.get('height')) * 0.3048; // convert to meters
     let gender = params.get('gender');
     let score = params.get('score'); 
+    let email = params.get('email'); 
 
       // calculate BMI
       let BMI = weight / Math.pow(height, 2);
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
           score *= 0.7; // adjust score for obesity
       }
-
+//
     document.getElementById('firstName').innerText = firstName;
     document.getElementById('lastName').innerText = lastName;
     document.getElementById('age').innerText = age;
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('gender').innerText = gender;
     document.getElementById("BMI").innerText = BMI.toFixed(2);
     document.getElementById("score").innerText = score.toFixed(2); 
+    
    
 });
 

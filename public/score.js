@@ -1,3 +1,5 @@
+// score.js
+document.addEventListener("DOMContentLoaded", function() {
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -122,6 +124,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
    let weight = parseFloat(document.querySelector('input[name="weight"]').value);
    let height = parseFloat(document.querySelector('input[name="height"]').value);
    let gender = document.querySelector('input[name="gender"]:checked').value;
+   let email = document.querySelector('input[name="email"]').value;
 
    let percentageScore = ((score / totalPossibleScore) * 100).toFixed(2);
   
@@ -139,10 +142,12 @@ document.querySelector("form").addEventListener("submit", function(event) {
    resultsUrl.searchParams.append('weight', weight);
    resultsUrl.searchParams.append('height', height);
    resultsUrl.searchParams.append('gender', gender);
+   resultsUrl.searchParams.append('email', email);
 
    // Redirect to the results page with the score and additional parameters in the URL
    window.location.href = resultsUrl;
 
    console.log(`Your health score is: ${percentageScore}%`);
     
+});
 });
