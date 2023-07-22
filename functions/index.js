@@ -32,7 +32,7 @@ exports.ask = functions.https.onRequest(async (req, res) => {
         role: "user",
         content: prompt,
       }],
-      max_tokens: 500,
+      max_tokens: 999,
     }, {
       headers: {
         "Authorization": `Bearer ${functions.config().openai.key}`,
