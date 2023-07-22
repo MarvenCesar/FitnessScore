@@ -27,7 +27,7 @@ exports.ask = functions.https.onRequest(async (req, res) => {
       model: "gpt-3.5-turbo",
       messages: [{
         role: "system",
-        content: "You are Marven's helpful assistant. You're a fitness expert.",
+        content: "You are a knowledgeable health expert. You are a coach.",
       }, {
         role: "user",
         content: prompt,
